@@ -201,10 +201,24 @@ a:hover {
 
 .list-columns {
   display: flex;
-  justify-content: space-between;
+  justify-content: left;
+  column-gap: 2rem;
 }
 
 .list-columns ul {
   list-style-type: none;
   padding: 0;
 }
+
+.list-columns li {
+  position: relative;
+  padding-left: 20px;
+}
+
+.list-columns li::before {
+  content: ">";
+  position: absolute;
+  left: 0;
+  color:rgba(100, 255, 218);
+}
+
