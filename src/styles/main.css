@@ -1,0 +1,210 @@
+@font-face {
+  font-family: "NTR";
+  font-weight: 200;
+  font-display: fallback;
+  src: url("/fonts/NTR-Regular.ttf") format("truetype");
+}
+
+body {
+  background: rgb(10, 25, 47);
+  color: #fff;
+  font-family: "NTR", Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 150px auto;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 3 em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: rgba(100, 255, 218);
+
+}
+h2{
+  font-size: 2.5 em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: rgba(100, 255, 218);
+}
+h3{
+  font-size: 2.5 em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+a {
+  color:rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.typing-animation {
+  display: inline-block;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+/* 
+.about-me {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.about-me {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.about-me h2 {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.about-me .list {
+  text-align: left;
+}
+*/ 
+
+
+#fractal-tree {
+  display: block;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  width: 370px;
+  height: 350px;
+}
+
+.about-me {
+  margin-top: 50px;
+  text-align: center;
+}
+.list{
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: left;
+}
+
+.software-creations {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.creation {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.creation img {
+  border-radius: 5px;
+  max-width: 100%;
+  height: auto;
+}
+
+.creation h3 {
+  font-size: 1.5em;
+  margin: 10px 0;
+}
+
+.creation p {
+  font-size: 1em;
+  text-align: center;
+}
+
+.highlight {
+  color: rgb(100, 255, 218);
+}
+
+.cursor {
+  color: rgb(100, 255, 218);
+  display: inline-block;
+  animation: blink 1s step-end infinite;
+  font-size: 2.5em;
+
+}
+
+.about-me,
+.software-creations {
+  width: 100%;
+  text-align: left;
+}
+
+.typing-animation {
+  display: inline;
+  animation: blink 1s step-end infinite;
+}
+.intro-text {
+  font-size: 2.5em; 
+  color: rgb(100, 255, 218); 
+}
+.button-container {
+  position: relative;
+}
+
+.button {
+  width: 5px;
+  height: 15px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none; 
+  outline: none;
+  cursor: pointer;
+  position: fixed;
+  top: 700px;
+  right: 80px;
+}
+
+.button2-container {
+  position: relative;
+}
+.button2{
+  width: 5px; 
+  height: 15px; 
+  background-size: contain; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  border: none; 
+  outline: none; 
+  cursor: pointer; 
+  position: fixed;
+  top: 700px;
+  right: 50px;
+}
+
+.list-columns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-columns ul {
+  list-style-type: none;
+  padding: 0;
+}
