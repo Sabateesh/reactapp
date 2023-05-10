@@ -41,9 +41,20 @@ h3{
 p {
   font-size: 1.1em;
   margin-bottom: 15px;
-  text-align: left;
+  text-align: left;;
 }
-
+b{
+  color: #8892b0;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  text-align: left;;
+}
+b2{
+  color:#8892b0;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  text-align: left;;
+}
 a {
   color:rgb(255, 255, 255);
   text-decoration: none;
@@ -86,6 +97,12 @@ a:hover {
   text-align: left;
 }
 */ 
+.about-me p {
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  text-align: left;
+  color: #ccd6f6;
+}
 
 
 #fractal-tree {
@@ -111,15 +128,19 @@ a:hover {
 
 .software-creations {
   margin-top: 50px;
-  text-align: center;
+  text-align: left;
+  margin-right: auto;
+  position: relative;
 }
 
 .creation {
   background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
-  margin-bottom: 20px;
   padding: 20px;
   text-align: center;
+  position: relative;
+  width: 45%;
 }
 
 .creation img {
@@ -128,9 +149,18 @@ a:hover {
   height: auto;
 }
 
+.creation p{
+  font-size: 1.1em;
+  margin-bottom: 15px;
+  text-align: left;
+  color: #8892b0;
+}
+
 .creation h3 {
   font-size: 1.5em;
   margin: 10px 0;
+  text-align: center;
+  color: #ccd6f6;
 }
 
 .creation p {
@@ -152,8 +182,11 @@ a:hover {
 
 .about-me,
 .software-creations {
+  flex-direction: row;
+  align-items:flex-start;
   width: 100%;
   text-align: left;
+  position: relative;
 }
 
 .typing-animation {
@@ -222,3 +255,34 @@ a:hover {
   color:rgba(100, 255, 218);
 }
 
+.button3-container {
+  position: inherit;
+}
+
+.button3 {
+  width: 20px;
+  height: 35px;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.octapp-gif {
+  position: absolute;
+  top: 50px;
+  right: 150px;
+}
+
+@media screen and (max-width: 900px) {
+  .octapp-gif {
+    position: relative;
+    top: 0;
+    right: 0;
+  }
+}
