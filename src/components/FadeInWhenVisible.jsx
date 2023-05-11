@@ -1,4 +1,4 @@
-// FadeInWhenVisible.js
+// Date: 2023/05/09
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { useSpring, animated } from 'react-spring';
