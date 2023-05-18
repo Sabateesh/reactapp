@@ -16,13 +16,37 @@ import FadeInWhenVisible from './components/FadeInWhenVisible';
 
 function App() {
   
+  const scrollToTop = () => {
+    window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+  };
+
+  const scrollToAboutme = () => {
+    window.scrollTo({
+    top: 450, 
+    behavior: 'smooth'
+  });
+ };
+
+  const scrollToSoftwareCreations = () => {
+    window.scrollTo({
+    top: 1000, 
+    behavior: 'smooth'
+  });
+
+
+
+};
+  
   return (
     <div className="App">
 
       <FractalTree />
       <TypingAnimation
         className={'intro-text'}
-        text='Hi, Sabateesh here.'
+        text='Hi, Sabateesh here 👋🏾 '
         speed={100}
       />
 
@@ -47,6 +71,14 @@ function App() {
       <a href='https://github.com/Sabateesh' target="_blank" rel="norefferer">
         <button className="button2" style={{ backgroundImage: `url(${githubLogo})` }}></button>
       </a>
+      <button className = "homeButton" onClick={scrollToTop}>01. Home</button>
+      <button className = "aboutMeButton" onClick={scrollToAboutme}>02. About </button>
+      <button className = "softwareCreationsButton" onClick={scrollToSoftwareCreations}>03. Projects</button>
+
+
+
+
+
       
     </div>
   );
