@@ -1,8 +1,9 @@
 @font-face {
-  font-family: "NTR";
-  font-weight: 200;
-  font-display: fallback;
-  src: url("/fonts/NTR-Regular.ttf") format("truetype");
+  font-family: 'Calibre';
+  src: url('/Calibre-Semibold.woff2') format('woff2');
+  font-weight: 600; /* Semibold */
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
@@ -21,31 +22,35 @@ body {
 }
 
 h1 {
-  font-size: 3 em;
+  font-size: 2.5em;
   font-weight: bold;
   margin-bottom: 20px;
-  color: rgba(100, 255, 218);
+  color: #64ffda;
+
 
 }
 h2{
-  font-size: 2.5 em;
+  font-size: 1.5em;
   font-weight: bold;
   margin-bottom: 20px;
-  color: rgba(100, 255, 218);
+  color: #64ffda;
 }
 h3{
-  font-size: 2.5 em;
+  font-size: 2.5em;
   font-weight: bold;
   margin-bottom: 20px;
 }
 p {
-  font-size: 1.1em;
+  font-size: 1.2em;
   margin-bottom: 15px;
   text-align: left;;
+  font-family: 'Calibre', sans-serif;
+
 }
 b{
-  color: #8892b0;
-  font-size: 1.1em;
+  font-family: 'Calibre', sans-serif;
+  color: #a8b2d1;
+  font-size: 1.5em;
   margin-bottom: 15px;
   text-align: left;;
 }
@@ -68,7 +73,6 @@ a:hover {
   display: inline-block;
   animation: blink 1s step-end infinite;
 }
-
 @keyframes blink {
   50% {
     opacity: 0;
@@ -98,10 +102,10 @@ a:hover {
 }
 */ 
 .about-me p {
-  font-size: 1.1em;
+  font-size: 1.5em;
   margin-bottom: 15px;
   text-align: left;
-  color: #ccd6f6;
+  color: #a8b2d1;
 }
 
 
@@ -164,7 +168,7 @@ a:hover {
   font-size: 1.5em;
   margin: 10px 0;
   text-align: center;
-  color: #ccd6f6;
+  color: #a8b2d1;
 }
 
 .creation p {
@@ -173,11 +177,11 @@ a:hover {
 }
 
 .highlight {
-  color: rgb(100, 255, 218);
+  color: #64ffda;
 }
 
 .cursor {
-  color: rgb(100, 255, 218);
+  color: #64ffda;
   display: inline-block;
   animation: blink 1s step-end infinite;
   font-size: 2.5em;
@@ -198,9 +202,18 @@ a:hover {
   animation: blink 1s step-end infinite;
 }
 .intro-text {
-  font-size: 2.5em; 
-  color: rgb(100, 255, 218); 
+  font-family: 'Calibre', sans-serif;
+  font-weight: bolder;
+  font-size: 3.5em; 
+  color: #64ffda; 
 }
+@media (max-width: 600px) {
+  .intro-text {
+      font-size: 35px;
+  }
+}
+
+
 .button-container {
   position: relative;
 }
@@ -214,10 +227,11 @@ a:hover {
   border: none; 
   outline: none;
   cursor: pointer;
-  position: fixed;
-  top: 700px;
-  right: 80px;
+  position: fixed; /* changed from absolute to fixed */
+  bottom: 30px; /* changed from top to bottom */
+  right: 50px; /* adjusted the position */
 }
+
 
 .button2-container {
   position: relative;
@@ -231,9 +245,9 @@ a:hover {
   border: none; 
   outline: none; 
   cursor: pointer; 
-  position: fixed;
-  top: 700px;
-  right: 50px;
+  position: fixed; /* changed from absolute to fixed */
+  bottom: 30px; /* changed from top to bottom */
+  right: 20px; /* adjusted the position */
 }
 
 .list-columns {
@@ -256,7 +270,7 @@ a:hover {
   content: ">";
   position: absolute;
   left: 0;
-  color:rgba(100, 255, 218);
+  color:#64ffda;
 }
 
 .button3-container {
@@ -264,7 +278,7 @@ a:hover {
 }
 
 .button3 {
-  color: rgba(100, 255, 218);
+  color: #64ffda;
   background-size: contain;
   border: none;
   outline: none;
@@ -273,6 +287,13 @@ a:hover {
   top: 3px;
   left: 5px;
 }
+@media screen and (max-width:600px) {
+  .button3 {
+   opacity: 0;
+
+  }
+}
+
 
 .octapp-gif {
   position: absolute;
@@ -283,52 +304,51 @@ a:hover {
 
 @media screen and (max-width: 900px) {
   .octapp-gif {
-    position: relative;
-    top: 0;
-    right: 0;
+    top: 70px;
+    right: 100px;
   }
 }
-.homeButton{
+@media screen and (max-width:600px) {
+  .octapp-gif {
+   bottom: 800px;
+   left: 100px;
+   width: 500px;
+   height: 400px;
+  }
+}
+
+
+.softwareCreationsButton, .aboutMeButton, .homeButton{
+  font-family: 'SF Mono', Consolas, 'Courier New', monospace;
   position: fixed; /* Fixed/sticky position */
   top: 20px; /* Place the button at the top of the page */
-  right: 275px; /* Place the button 30px from the right */
   z-index: 99; /* Make sure it does not overlap */
   border: none; /* Remove borders */
   outline: none; /* Remove outline */
-  background-color: blue; /* Set a background color */
-  color: white; /* Text color */
+  background-color: transparent; /* Set a background color */
   cursor: pointer; /* Add a mouse pointer on hover */
   padding: 10px; /* Some padding */
   border-radius: 5px; /* Rounded corners */
   font-size: 16px; /* Increase font size */
+}
+
+.homeButton {
+  right: 375px; /* Place the button 30px from the right */
 }
 
 .aboutMeButton {
-  position: fixed; /* Fixed/sticky position */
-  top: 20px; /* Place the button at the top of the page */
-  right: 150px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: blue; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 10px; /* Some padding */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 16px; /* Increase font size */
+  right: 260px; /* Place the button 30px from the right */
 }
 
-.softwareCreationsButton{
-  position: fixed; /* Fixed/sticky position */
-  top: 20px; /* Place the button at the top of the page */
-  right: 25px; /* Place the button 30px from the right */
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: blue; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 10px; /* Some padding */
-  border-radius: 5px; /* Rounded corners */
-  font-size: 16px; /* Increase font size */
+.softwareCreationsButton {
+  right: 125px; /* Place the button 30px from the right */
 }
+
+.homeButton .number1, .aboutMeButton .number2, .softwareCreationsButton .number3 {
+  color: #64ffda;
+}
+
+.homeButton .text, .aboutMeButton .text, .softwareCreationsButton .text {
+  color: #8892b0;
+}
+

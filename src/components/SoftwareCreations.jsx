@@ -19,7 +19,7 @@ const SoftwareCreations = () => {
           <AiOutlineFolder size={50}/> 
         </button>
       </a>
-        <img ref={creationImgRef} src={OCT} alt="Creation 1" width="100" height="100" />
+        <img ref={creationImgRef} src={OCT} alt="Creation 1" width="200" height="200" />
         <h3>OC Transpo App</h3>
         <p>
           An app that uses OC Transpo API to provide reliable Bus Schedules to
@@ -30,10 +30,23 @@ const SoftwareCreations = () => {
         </p>
       </div>
 
-      <video className="octapp-gif" width={250} height={500} autoPlay loop muted>
+      {/*
+     <video className="octapp-gif" width={250} height={500} autoPlay loop muted>
         <source src={gif} type="video/webm" />
         Your browser does not support the video tag.
       </video>
+      */
+      }
+
+
+
+      <video className="octapp-gif" width={250} height={500} autoPlay loop muted ref={video => video && video.load()}>
+        <source src={gif} type="video/webm" />
+        Your browser does not support the video tag.
+      </video>
+
+
+
     </section>
   );
 };
