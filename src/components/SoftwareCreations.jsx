@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { AiOutlineFolder } from "react-icons/ai";
 const OCT = '/assets/OCT.png';
-const gif ='./assets/OCt.webm';
+const gif ='./assets/OCt.mp4';
 
 
 const SoftwareCreations = () => {
@@ -41,7 +41,7 @@ const SoftwareCreations = () => {
 
 
       <video className="octapp-gif" width={250} height={500} autoPlay loop muted ref={video => video && video.load()}>
-        <source src={gif} type="video/webm" />
+        <source src={gif} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
