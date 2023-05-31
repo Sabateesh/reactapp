@@ -9,10 +9,11 @@ import TypingAnimation from './components/TypingAnimation';
 import AboutMe from './components/AboutMe';
 import SoftwareCreations from './components/SoftwareCreations';
 import Bio from './components/Bio';
-import linkedinLogo from './assets/linkedin.png';
-import githubLogo from './assets/github.png';
+import Credits from './components/Credits';
 import FadeInWhenVisible from './components/FadeInWhenVisible';
 import Button from '@mui/material/Button';
+import {AiFillGithub} from "react-icons/ai";
+import {AiFillLinkedin} from "react-icons/ai"
 
 function App() {
   
@@ -69,11 +70,19 @@ function App() {
       </FadeInWhenVisible>
 
       <a href='https://www.linkedin.com/in/sabateesh-s-83b532229/' target="_blank" rel="norefferer">
-        <button className="button" style={{ backgroundImage: `url(${linkedinLogo})` }}></button>
+        <button className="button">
+          <AiFillLinkedin size={30} style={{ fill: '#64ffda' }}/>
+        </button>
       </a>
-      <a href='https://github.com/Sabateesh' target="_blank" rel="norefferer">
-        <button className="button2" style={{ backgroundImage: `url(${githubLogo})` }}></button>
+      
+      
+      <a href='https://github.com/Sabateesh' target="_blank" rel="noopener noreferrer">
+        <button className="button2">
+          <AiFillGithub size={30} style={{ fill: '#64ffda' }}/>
+        </button>
       </a>
+
+
       <button className="homeButton" onClick={scrollToTop}>
         <span className="number1">01. </span>
         <span className="text">Home</span>
@@ -110,6 +119,12 @@ function App() {
       >
         résumé
       </Button>
+
+
+      <FadeInWhenVisible>
+        <Credits />
+        </FadeInWhenVisible>
+
     </div>
   );
 }
