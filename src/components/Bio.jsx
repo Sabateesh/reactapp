@@ -2,8 +2,7 @@ import React from 'react';
 import Button from '@mui/material/Button';
 
 const Bio = () => {
-  const handleResumeClick = () => {
-    // This will open the user's email client with a new draft to your email address
+  const handleemailClick = () => {
     window.open('mailto:SabateeshSivakumar@cmail.carleton.ca', '_blank');
   };
 
@@ -19,7 +18,7 @@ const Bio = () => {
         <Button 
           variant="contained" 
           color="primary" 
-          onClick={handleResumeClick}
+          onClick={handleemailClick}
           style={{
             backgroundColor: 'transparent',
             border: '1px solid #64ffda',

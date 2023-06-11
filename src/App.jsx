@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { Component, useState } from 'react';
 import reactLogo from './assets/react.svg';
 import viteLogo from '/vite.svg';
 import './App.css';
@@ -11,9 +11,11 @@ import SoftwareCreations from './components/SoftwareCreations';
 import Bio from './components/Bio';
 import Credits from './components/Credits';
 import FadeInWhenVisible from './components/FadeInWhenVisible';
+import Space from './components/Space';
 import Button from '@mui/material/Button';
 import {AiFillGithub} from "react-icons/ai";
 import {AiFillLinkedin} from "react-icons/ai"
+import Resume from '../public/Resume.pdf'
 
 function App() {
   
@@ -42,20 +44,23 @@ function App() {
     // logic for handling a click on the "Resume" button
     // for example, you might want to download a resume
     const link = document.createElement('a');
-    link.href = './resume.pdf';
-    link.download = 'resume.pdf';
-    link.click();
+    link.href = './Resume.pdf'; // the path to your resume file
+    link.download = 'Resume.pdf'; // the default filename for the downloaded file
+    link.click(); // this "clicks" the link to start the download
     console.log("Resume button clicked!");
   };
 
+
   return (
     <div className="App">
+      
       <FractalTree />
       <TypingAnimation
         className={'intro-text'}
         text='Hi, Sabateesh here 👋.'
         speed={100}
       />
+     
 
       <FadeInWhenVisible>
         <Bio />
@@ -65,9 +70,11 @@ function App() {
         <AboutMe />
       </FadeInWhenVisible>
 
+      {/*<Space/> */}
       <FadeInWhenVisible>
         <SoftwareCreations />
       </FadeInWhenVisible>
+      
 
       <a href='https://www.linkedin.com/in/sabateesh-s-83b532229/' target="_blank" rel="norefferer">
         <button className="button">
