@@ -41,12 +41,11 @@ function App() {
   };
 
   const handleResumeClick = () => {
-    // logic for handling a click on the "Resume" button
-    // for example, you might want to download a resume
+    // logic for handling a click on the "Resume"
     const link = document.createElement('a');
-    link.href = './Resume.pdf'; // the path to your resume file
-    link.download = 'Resume.pdf'; // the default filename for the downloaded file
-    link.click(); // this "clicks" the link to start the download
+    link.href = './Resume.pdf'; 
+    link.download = 'Resume.pdf'; 
+    link.click();
     console.log("Resume button clicked!");
   };
 

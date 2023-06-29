@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styled from 'styled-components'; // import this
-import Side from './side'; // if `Side` and `Email` are in the same directory
+import styled from 'styled-components';
+import Side from './side'; 
 
 const StyledLinkWrapper = styled.div`
   display: flex;

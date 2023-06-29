@@ -1,3 +1,5 @@
+//NOTE NOT CURRENTLY USED IN APP
+
 import React, { useEffect, useRef } from "react";
 import p5 from "p5";
 
