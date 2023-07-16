@@ -1,5 +1,6 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { AiOutlineFolder } from "react-icons/ai";
+
 const OCT = '/assets/OCT.png';
 const gif ='./assets/OCt.mp4';
 
@@ -8,14 +9,27 @@ const SoftwareCreations = () => {
   const sectionRef = useRef();
   const creationImgRef = useRef();
   const gitlinkRef = useRef();
+  const videoRef = useRef();
 
-  const linkStyle = {
-    textDecoration: 'none',
-  };
+  const [linkStyle, setLinkStyle] = useState({textDecoration: 'none'});
+  const hoverStyle = {textDecoration: 'none'};
 
-  const hoverStyle = {
-    textDecoration: 'none',
-  };
+  const [videoPlay, setVideoPlay] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setVideoPlay(true);
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    }
+  }, []);
+
+  useEffect(() => {
+    if(videoPlay && videoRef.current) {
+      videoRef.current.play();
+    }
+  }, [videoPlay]);
 
   return (
     <section className="software-creations" ref={sectionRef}>
@@ -25,8 +39,8 @@ const SoftwareCreations = () => {
         target="_blank" 
         rel="noopener noreferrer" 
         style={linkStyle} 
-        onMouseOver={() => linkStyle.textDecoration = 'none'}
-        onMouseOut={() => linkStyle.textDecoration = hoverStyle.textDecoration}
+        onMouseOver={() => setLinkStyle({textDecoration: 'none'})}
+        onMouseOut={() => setLinkStyle(hoverStyle)}
       >
         <div className="creation" ref={cardRef}>
           <button className="button3">
@@ -44,7 +58,7 @@ const SoftwareCreations = () => {
         </div>
       </a>
 
-      <video className="octapp-gif" width={250} height={500} autoPlay loop muted ref={video => video && video.load()}>
+      <video className="octapp-gif" width={250} height={500} loop muted ref={videoRef}>
         <source src={gif} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
