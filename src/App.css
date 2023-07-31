@@ -3,6 +3,8 @@
   margin: 0 auto;
   padding: 3rem;
   text-align: left;
+  color-scheme: only light !important;
+
 }
 
 .logo {
